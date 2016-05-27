@@ -1,0 +1,18 @@
+{
+  "name": "code-for-designers",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Eric Sun <ericsun977@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ericsun977/code-for-designers",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
