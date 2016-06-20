@@ -2,10 +2,18 @@ body {
   font-size: 16px;
 }
 
+button {
+  font-size: 20px;
+  background-color: #999;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+
 .buttons-wrap {
   margin: 0 auto;
 
   button {
-    // something
+    font-size: 100px;
   }
 }
