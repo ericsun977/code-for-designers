@@ -11,10 +11,10 @@ var argv = require('yargs').argv;
 // == PATH STRINGS ========
 var src = {
   components:['bower.json'],
-  scripts: ['src/scripts/**/*.js'],
-  scss: ['src/sass/**/*.scss'],
-  img: ['src/images/**/*'],
-  index: ['src/*.html']
+  scripts: ['./src/scripts/**/*.js'],
+  scss: ['./src/sass/**/*.scss'],
+  img: ['./src/images/**/*'],
+  index: ['./src/*.html']
 };
 
 var dist = {
@@ -32,6 +32,13 @@ var filter = {
   fonts: plugins.filter(['*.eot', '*.woff', '*.svg', '*.ttf'])
 };
 
+var libraries = [
+  './bower_components/jquery/dist/jquery.min.js',
+  './bower_components/jquery/dist/jquery.min.js.map',
+  './bower_components/jquery.steps/build/jquery.steps.min.js',
+  './bower_components/jquery.steps/demo/css/jquery.steps.css'
+];
+
 
 // == Tasks ========
 
@@ -45,6 +52,16 @@ gulp.task('lint', function() {
   return gulp.src(src.scripts)
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('default'));
+});
+
+gulp.task('libs', function(){
+  return gulp.src(libraries)
+    // .pipe(filter.js)
+    .pipe(gulp.dest(dist.components));
+    // .pipe(filter.js.restore())
+    // .pipe(filter.css)
+    // .pipe(gulp.dest(dist.components))
+    // .pipe(filter.js.restore())
 });
 
 // Compile Sass
@@ -122,7 +139,7 @@ gulp.task('index', function(){
 
 // Build Task
 gulp.task('build',function(callback){
-  runSequence('clean', [ 'lint', 'sass', 'scripts', 'images'], 'index', callback);
+  runSequence('clean', [ 'libs', 'lint', 'sass', 'scripts', 'images'], 'index', callback);
 });
 
 // Serve Task

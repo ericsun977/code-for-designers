@@ -8,13 +8,47 @@
     <!-- endinject -->
     <!-- inject:css -->
     <!-- endinject -->
+    <link href="//hayageek.github.io/jQuery-Upload-File/4.0.10/uploadfile.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Playfair+Display|Montserrat:400,700' rel='stylesheet' type='text/css'>
 </head>
   <body>
-    <h1>Hello!</h1>
+    <h1>Image Upload</h1>
+
+    <div class="upload-wizard-container">
+      <div id="wizard">
+        <h3></h3>
+        <section>
+          <h1 class="wizard-content__title"> Upload your photo to preview in all out frames.</h1>
+          <div id="fileuploader">Upload</div>
+        </section>
+
+        <h3></h3>
+        <section>
+          <h1 class="wizard-content__title"> What size would you like your art printed?</h1>
+          <div class="resize-container">
+            <div class="resize-illustration">
+              <img src="images/illustrated-wall.jpg" />
+            </div>
+            <div class="resize-controls">
+              <div class="size-dimensions">
+                <span class="width">0"</span> x <span class="height">0"</span>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+
+
+
   </body>
 
   <!-- bower:js -->
   <!-- endinject -->
+  <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.10/jquery.uploadfile.min.js"></script>
   <!-- inject:js -->
   <!-- endinject -->
 </html>

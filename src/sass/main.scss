@@ -1,3 +1,66 @@
+@charset "UTF-8";
+
+$base-font-size: 100%;
+$base-line-height: 1.5;
+
+$font-family-sans-serif: "Montserrat", Helvetica, Roboto, Arial, sans-serif;
+$font-family-serif: "Playfair Display", serif;
+$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
 body {
   font-size: 16px;
+}
+
+
+.upload-wizard-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+.wizard {
+
+  > .steps {
+    overflow: hidden;
+  }
+
+  .wizard-content__title {
+    text-align: center;
+    font-family: $font-family-serif;
+  }
+
+  .resize-container {
+    display: flex;
+    justify-content: flex-start;
+
+    .resize-illustration {
+      flex: 1 0 0;
+      margin: 0 auto;
+    }
+    .resize-controls {
+      flex: 1 0 0;
+      margin: 0 auto;
+      padding: 15px;
+    }
+  }
+
+  .size-dimensions {
+    font-family: $font-family-serif;
+    text-align: center;
+    font-size: 24px;
+    color: #999;
+  }
+
+}
+
+
+
+
+.ajax-file-upload-container {
+  width: 400px;
+  height: auto;
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
